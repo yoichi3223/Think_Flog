@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ThinkFrog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+<header>
+  <nav>
+<div class = header-logo>
+<i class="fas fa-frog fa-lg"></i>
+<strong><p class ="logo-name">ThinkFrog</p></strong>
+</div>
+<% if user_signed_in? %>
+<%= render 'layouts/after_login'%>
+<% else %>
+<%= render 'layouts/before_login'%>
+<% end %>
+</nav>
+
+</header>
+
+<div class= "wrapper">
+    <%= yield %>
+  </div>
+
+<!-- フッタhtml -->
+<footer>
+    <p class = "footer_copyright">© 2020 Yoichi Hashimoto. All Rights Reserved.</p>
+   <div class = "icons">
+<i class="fab fa-github fa-lg github"></i>
+<i class="fab fa-facebook-square fa-lg fb"></i>
+<i class="fab fa-twitter fa-lg twitter"></i>
+   </div>
+ </footer>
+
+
+
+
+  </body>
+</html>
