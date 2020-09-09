@@ -1,10 +1,12 @@
 // Place all the styles related to the top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-  .topPage {
-  min-height: 93vh;
+.topPage {
+  min-height: 95vh;
   padding-top: 30px;
-  background: #bababa;
+  background-image:url(https://source.unsplash.com/category/nature);
+  background-size:cover;
+  position:center;
   overflow-x: scroll;
   .listWrapper {
     display: flex;
@@ -13,9 +15,10 @@
     .list {
       position: relative;
       background: #e2e4e6;
+      border-radius:10px;
       padding: 10px;
       margin-left: 20px;
-      min-width: 250px;
+      min-width: 350px;
       &:last-child {
         margin-right: 20px;
       }
@@ -25,7 +28,7 @@
         align-items: center;
         justify-content: space-between;
         &_title {
-          font-size: 20px;
+          font-size: 30px;
           margin: 0;
         }
         &_action {
@@ -35,6 +38,38 @@
           }
           .fa-trash {
             margin-right: 10px;
+          }
+        }
+      }
+      .cardWrapper {
+        overflow-y: scroll;
+        max-height: 76vh;
+
+        /* ==========ここから追加する========== */
+        .card {
+          background-color:#FFFFFF;
+          margin-bottom: 10px;
+          padding: 10px;
+          &_title {
+            font-size: 30px;
+          }
+          &_detail {
+            display: none;
+            &.is-exist {
+              display: block;
+              color: #999;
+              & > i {
+                display: block;
+              }
+            }
+          }
+        }
+        /* ==========ここまで追加する========== */
+
+        .addCard {
+          color: #8c8c8c;
+          &_link {
+            color: #8c8c8c;
           }
         }
       }

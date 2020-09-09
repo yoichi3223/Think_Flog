@@ -16,6 +16,7 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome-sprockets";
+ @import "toastr";
  @import "font-awesome";
 
  /*--リセットCSS--*/
@@ -56,7 +57,7 @@ header{
 	font-weight:bold;
 	position:absolute;
 	top:38px;
-	left:1250px;
+	left:1100px;
 }
 
 .logo-name{
@@ -78,7 +79,6 @@ ul{
 	margin-left:50px;
 	list-style:none;
 }
-
 /*--以下はフッタのCSSとなります--*/
 footer{
 	width: 100%;
