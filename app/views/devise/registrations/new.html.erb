@@ -15,27 +15,27 @@ Have notes every day!!</p>
 
   <div class="field">
     <%= f.label :性%><br />
-<%= f.text_field :family_name, autocomplete: "family_name", size: "50x10",class:"form-control"  %>
+<%= f.text_field :family_name, autocomplete: "family_name", size: "50x10",class:"form-control", :placeholder => "苗字を入力してください"  %>
 </div>
-
+<br>
 <div class="field">
     <%= f.label :名 %><br />
-<%= f.text_field :first_name, autocomplete: "first_name", size: "50x10",class:"form-control" %>
+<%= f.text_field :first_name, autocomplete: "first_name", size: "50x10",class:"form-control", :placeholder => "名前を入力してください" %>
 </div>
-
+<br>
   <div class="field">
     <%= f.label :メールアドレス %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", size: "50x10",class:"form-control"  %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", size: "50x10",class:"form-control", :placeholder => "メールアドレスを入力してください"  %>
   </div>
-
+<br>
   <div class="field">
     <%= f.label :パスワード%>
-    <%= f.password_field :password, autocomplete: "new-password", size: "50x10",class:"form-control"  %>
+    <%= f.password_field :password, autocomplete: "new-password", size: "50x10",class:"form-control" , :placeholder => "パスワードを6文字以上で入力してください" %>
   </div>
-
+<br>
   <div class="field">
     <%= f.label :パスワード確認 %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", size: "50x10",class:"form-control"  %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", size: "50x10",class:"form-control", :placeholder => "確認のため再度パスワードを入力してください" %>
   </div>
   <br>
   <div class="actions">
@@ -43,6 +43,7 @@ Have notes every day!!</p>
   </div>
 <% end %>
 
+<%= link_to "facebook", user_facebook_omniauth_authorize_path  %>
   </div>
 </div>
   </div>

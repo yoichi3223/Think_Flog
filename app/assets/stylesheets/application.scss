@@ -48,6 +48,15 @@ header{
 	left: 13%;
 	font-size: 40px;
 }
+.header-username{
+	list-style:none;
+	color:white;
+	font-size:18px;
+	font-weight:bold;
+	position:absolute;
+	top:38px;
+	left:1250px;
+}
 
 .logo-name{
 	display: inline-block;
@@ -150,13 +159,14 @@ footer p{
 	width:600px;
 	height:600px;
 	margin:0 auto;
-	text-align:center;
+
 	padding-top:100px;
 }
 
-.login-contents h1{
-	font-size:47px;
+.form-contents h1{
+	font-size:45px;
 	font-weight:bold;
+	text-align:center;
 }
 
 /*--以下は無料登録のCSSとなります--*/
