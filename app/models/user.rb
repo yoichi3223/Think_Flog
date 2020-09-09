@@ -8,6 +8,8 @@ class User < ApplicationRecord
 
     unless user
       user = User.create(
+      	family_name: auth.info.name,
+      	first_name: auth.info.name,
         uid:      auth.uid,
         provider: auth.provider,
         email:    auth.info.email,
