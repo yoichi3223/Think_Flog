@@ -18,6 +18,7 @@ before_action :set_card,only: %i(show edit update destroy)
 		end
 	end
 	def show
+	  
 	end
 
 	def edit

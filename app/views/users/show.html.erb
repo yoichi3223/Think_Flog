@@ -1,0 +1,23 @@
+	<div class ="user-wrapper">
+<div class = "user-contents-box">
+	<div class = "user-contents">
+<label>プロフィール画像</label>
+<p><%= attachment_image_tag @user, :image, :fill, 250, 250 %></p>
+</div>
+<div class = "user-contents">
+<label>お名前(性)</label>
+<p><%= @user.family_name%></p>
+</div>
+<div class = "user-contents">
+<label>お名前(名)</label>
+<p><%= @user.first_name%></p>
+</div>
+<div class = "user-contents">
+<label>イントロダクション</label>
+<p><%= @user.introduction%></p>
+</div>
+<div class = "user-contents">
+<%=link_to "編集する", edit_user_path(@user),class:"btn btn-success btn-lg"%>
+</div>
+</div>
+	</div>

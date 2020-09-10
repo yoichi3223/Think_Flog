@@ -45,13 +45,12 @@
         overflow-y: scroll;
         max-height: 76vh;
 
-        /* ==========ここから追加する========== */
         .card {
           background-color:#FFFFFF;
           margin-bottom: 10px;
           padding: 10px;
           &_title {
-            font-size: 30px;
+            font-size: 20px;
           }
           &_detail {
             display: none;
@@ -64,7 +63,6 @@
             }
           }
         }
-        /* ==========ここまで追加する========== */
 
         .addCard {
           color: #8c8c8c;

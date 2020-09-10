@@ -3,22 +3,22 @@
 </p>
 <ul>
 	<li class="header_list">
-<%= link_to 'ボードトップ', top_index_path,class: "btn btn-default" %>
+<%= link_to 'ボードトップ', top_index_path,class: "btn btn-default btn-lg" %>
 </li>
 <li class="header_list">
-	<%= link_to 'リストを作成', new_list_path,class: "btn btn-default" %>
-</li>
-
-<li class="header_list">
-    <%= link_to 'カレンダー', new_user_session_path,class: "btn btn-default" %>
+	<%= link_to 'リストを作成', new_list_path,class: "btn btn-default btn-lg" %>
 </li>
 
 <li class="header_list">
-    <%= link_to 'マイページ', new_user_session_path,class: "btn btn-default" %>
+    <%= link_to 'カレンダー', new_user_session_path,class: "btn btn-default btn-lg" %>
 </li>
 
 <li class="header_list">
-    <%= link_to "ログアウト", destroy_user_session_path ,class: "btn btn-default" %>
+    <%= link_to 'マイページ', user_path(current_user),class: "btn btn-default btn-lg" %>
+</li>
+
+<li class="header_list">
+    <%= link_to "ログアウト", destroy_user_session_path ,class: "btn btn-default btn-lg" %>
 </li>
 </ul>
 

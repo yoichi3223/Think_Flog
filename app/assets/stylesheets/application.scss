@@ -56,8 +56,8 @@ header{
 	font-size:18px;
 	font-weight:bold;
 	position:absolute;
-	top:38px;
-	left:1100px;
+	top:40px;
+	left:950px;
 }
 
 .logo-name{
@@ -86,6 +86,16 @@ footer{
 	line-height: 100px;
 	padding-left: 800px;
 	background-color: #d3d3d3;
+	}
+	.footer-frog{
+	display:inline-block;
+	position:absolute;
+	left:100px;
+	font-size:30px;
+	color:white;
+	}
+	.footer-fas{
+	margin-right:35px;
 	}
 
 footer p{
@@ -196,12 +206,6 @@ footer p{
 	text-align:center;
 	padding-top:250px;
 	}
-
-
-
-
-
-
 
 
 

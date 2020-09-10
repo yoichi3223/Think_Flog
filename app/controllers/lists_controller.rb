@@ -21,6 +21,11 @@ class ListsController < ApplicationController
 
 	end
 
+	def show
+	  @list = List.find(params[:id])
+	  @cards = @list.cards
+	end
+
 	def update
 		if @list.update_attributes(list_params)
 			flash[:notice] = "リストを更新しました"
