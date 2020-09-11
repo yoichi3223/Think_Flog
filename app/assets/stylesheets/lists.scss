@@ -1,0 +1,30 @@
+// Place all the styles related to the lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.lists-contents{
+width:100%;
+height:800px;
+background-color:green;
+padding-top:30px;
+}
+.list-form{
+	width:40%;
+	height:700px;
+	margin:0 auto;
+	text-align: center;
+	padding-top:250px;
+	background-color:white;
+	border-radius:20px;
+
+}
+.list-form span{
+font-size:50px;
+font-weight:bold;
+
+}
+.btn-list{
+	width:500px;
+	heigth:50px;
+	font-size:30px;
+	font-weight:bold;
+}

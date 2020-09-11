@@ -1,0 +1,16 @@
+<div class= "lists-contents">
+   <div class ="list-form">
+
+
+    <%= form_with model: @list, url: { action: :create }, class: "new_list", local: true do |f| %>
+      <span><%= f.label :リスト名 %></span>
+      <br>
+      <br>
+      <p><%= f.text_field :title,placeholder: "リストタイトルを入力してください" ,class:"form-control"%></p>
+      <br>
+      <%= f.submit "作成する",class:"btn-list btn-success btn-lg" %>
+    <% end %>
+
+
+</div>
+</div>

@@ -1,0 +1,13 @@
+<div class= "lists-contents">
+   <div class ="list-form">
+
+    <%= form_with model: @list, url: { action: :update }, html: { class: 'listForm' }, local: true do |f| %>
+      <br>
+      <br>
+      <span><%= f.label :リスト名 %></span>
+      <p><%= f.text_field :title, class: "form-control" %></p>
+      <br>
+      <%= f.submit "編集する",class:"btn-list btn-success btn-lg"%>
+    <% end %>
+</div>
+</div>

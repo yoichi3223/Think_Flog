@@ -5,13 +5,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' , 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
 <header>
   <nav>
 <div class = header-logo>
-<i class="fas fa-frog faa-bounce animated"></i>
+<i class="fas fa-frog "></i>
 <strong><p class ="logo-name">ThinkFrog</p></strong>
 </div>
 <% if user_signed_in? %>
@@ -23,10 +23,23 @@
 
 </header>
     <%= yield %>
-  
 
+  <% if flash.any? %>
+      <script type="text/javascript">
+        <% flash.each do |key, value| %>
+          <% key = "success" if key == "notice" %>
+          <% key = "error" if key == "alert" %>
+          toastr['<%= key %>']('<%= value %>');
+        <% end %>
+      </script>
+    <% end %>
 <!-- フッタhtml -->
 <footer>
+  <div class = "footer-frog">
+  <i class="fas fa-frog footer-fas "></i>
+  <i class="fas fa-frog footer-fas "></i>
+  <i class="fas fa-frog footer-fas "></i>
+</div>
     <p class = "footer_copyright">© 2020 Yoichi Hashimoto. All Rights Reserved.</p>
    <div class = "icons">
 <i class="fab fa-github fa-lg github"></i>
