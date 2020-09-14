@@ -79,3 +79,4 @@ gem "toastr-rails"
 gem 'acts_as_list'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
+gem 'simple_form'
