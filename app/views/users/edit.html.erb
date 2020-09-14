@@ -4,23 +4,23 @@
     <%= form_with model: @user, url: { action: :update }, html: {}, local: true do |f| %>
     <div class = "user-contents">
 　　　　<label>プロフィール画像</label>
-        <%= attachment_image_tag @user,:image, :fill, 250, 250, fallback: "no_image.png"%>
+        <%= attachment_image_tag @user,:image,size:"250x250" ,fallback: "no_image.png"%>
        <%= f.attachment_field :image ,id: "item_image" %>
    </div>
 
 <div class = "user-contents">
     <label>お名前(性)</label>
-    <%= f.text_field :family_name, autofocus: true, class: "form-control"%>
+    <p><%= f.text_field :family_name, autofocus: true, class: " input-mysize"%></p>
 </div>
 
 <div class = "user-contents">
         <label>お名前(名)</label>
-        <%= f.text_area :first_name, autofocus: true, class: "form-control"%>
+        <p><%= f.text_field :first_name, autofocus: true, class: " input-mysize"%></p>
     </div>
 
     <div class = "user-contents">
         <label>イントロダクション</label>
-        <%= f.text_area :introduction, autofocus: true, class: "form-control"%>
+        <p><%= f.text_area :introduction, autofocus: true, class: " input-mysize"%></p>
     </div>
 
     <div class = "user-contents">

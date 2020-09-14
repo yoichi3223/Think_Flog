@@ -1,26 +1,25 @@
-<div class='carddetailPage'>
-  <div class="container">
-    <div class="cardContents">
-      <div class="cardContents_title">
-        <div>タイトル</div>
-        <h2><%= @card.title %></h2>
-      </div>
-      <div class="cardContents_memo">
-        <div>メモ</div>
-        <div><%= @card.memo %></div>
-      </div>
-      <div class="cardContents_listStatus">
-        <div>リスト名</div>
-        <div><%= @card.list.title %></div>
+<div class = "cards-contents">
+<div class ="card-form-show">
+    <h2>カード詳細</h2>
+    <br>
+    <div class ="card-list-show">
+        <span><label>タイトル</label></span>
+        <p><%= @card.title %></p>
       </div>
 
-      <%# ==========ここから追加する========== %>
-      <div class="cardContents_btnArea">
-        <%= link_to '編集する', edit_list_card_path(@card.list, @card), class: "edit_btn" %>
-        <%= link_to '削除をする', list_card_path(@card.list, @card), class: "text-danger delete_btn", method: :delete, data: { confirm: "このカードを削除して大丈夫ですか?" } %>
+<div class ="card-list-show">
+        <span><label>メモ</label></span>
+        <p><%= @card.memo %></p>
       </div>
-      <%# ==========ここまで追加する========== %>
-
+    <div class ="card-list-show">
+        <span><label>リスト名</label></span>
+        <span><label>メモ</label></span>
+      <p><%= @card.list.title %></p>
     </div>
-  </div>
+       <br>
+      <div>
+        <%= link_to '編集する', edit_list_card_path(@card.list, @card), class:"btn-card btn-success btn-lg"%>
+        <%= link_to '削除をする', list_card_path(@card.list, @card), class:"btn-card btn-danger btn-lg", method: :delete, data: { confirm: "このカードを削除して大丈夫ですか?" } %>
+      </div>
+</div>
 </div>

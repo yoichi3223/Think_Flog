@@ -1,5 +1,5 @@
 <div class= "lists-contents">
-   <div class ="list-form">
+   <div class ="card-form">
     <%= form_with model: @card, url: { action: :create }, html: { class: 'cardnewForm' }, local: true do |f| %>
       <%= f.hidden_field :list_id, value: @list.id %>
         <span><%= f.label :タイトル %></span>

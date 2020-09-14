@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   root 'homes#top'
   get 'homes/about'
   get 'top/index'
+  get  'contact/form' =>'messages#index', as: 'contact/form'
+  post 'contact/confirm' => 'messages#confirm', as: 'contact/confirm'
+  post 'contact/done' => 'messages#done', as: 'contact/done'
   resources :lists, only: %i(new create edit update destroy show) do
   resources :cards, only: %i(new create show edit update destroy)
   end
