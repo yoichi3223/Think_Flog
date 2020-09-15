@@ -56,3 +56,57 @@
 	font-size:23px;
 	margin-top:20px;
 	}
+
+#下記はaboutページのCSSです。
+
+	.about-main-visual{
+	background-image:url(about2.jpg);
+	background-size: cover;
+	background-position: top center;
+	height:1100px;
+	width: 100%;
+}
+.about-h1{
+	text-align: center;
+	padding-top: 20px;
+	font-size:80px;
+	font-weight: bold;
+	border-bottom:dashed 11px #5cb7cc;
+	color: #5cb7cc;
+	width:1000px;
+	margin: 0 auto;
+}
+.media {
+    background: #FFF;
+    padding: 10px;
+    overflow: hidden;
+    padding-top:50px;
+}
+.media__image {
+    float: left;
+    margin-right: 10px;
+}
+.media__image img{
+	height: 450px;
+	width: 600px;
+}
+
+.media__summary {
+    overflow: hidden;
+    font-size: 30px;
+}
+.media__heading {
+	padding-top:50px;
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.media__text {
+    font-size: 50px;
+    color: #5cb7cc;
+}
+.about{
+	width:2000px;
+	margin:0 auto;
+	text-align: center;
+}
