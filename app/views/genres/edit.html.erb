@@ -1,0 +1,9 @@
+
+<%= form_for @genre, url:user_genre_path,method: :patch do |f| %>
+ジャンル
+<%= f.text_field :title %>
+<%= f.radio_button :status ,true %>有効
+<%= f.radio_button :status ,false %>無効
+<%= f.submit "変更を保存する",class: "btn btn-info" %>
+<% end %>
+

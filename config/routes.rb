@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'genres/index'
+  get 'genres/edit'
   root 'homes#top'
   get 'homes/about'
   get 'top/index'
@@ -8,9 +10,12 @@ Rails.application.routes.draw do
   resources :lists, only: %i(new create edit update destroy show) do
   resources :cards, only: %i(new create show edit update destroy)
   end
+  resources :genres
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
   devise_scope :user do
   get '/users/sign_out' => 'devise/sessions#destroy'
   end
-  resources :users, only: %i(show edit update)
+  resources :users, only: %i(show edit update) do
+    resources :genres
+  end
 end
