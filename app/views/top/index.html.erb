@@ -4,6 +4,11 @@
       <div class="list">
         <div class="list_header">
           <h2 class="list_header_title"><%= list.title %></h2>
+          <!-- リストにジャンルが紐づいているか確認 -->
+          <% if list.genre.present? %>
+          <h4>関連タグ:<%= list.genre.title %></h4>
+          <% end %>
+
           <div class="list_header_action">
             <%= link_to content_tag(:i, '', class: 'fas fa-trash'), list, method: :delete, data: { confirm: "#{list.title}を削除します。よろしいですか？" } %>
             <%= link_to(content_tag(:i, '', class: 'fas fa-pen'), edit_list_path(list)) %>

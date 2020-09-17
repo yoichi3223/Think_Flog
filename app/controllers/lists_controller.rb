@@ -5,6 +5,7 @@ class ListsController < ApplicationController
 
 	def new
 	@list = List.new
+	@genre = Genre.where(user: current_user)
 	end
 
 	def create
@@ -18,7 +19,7 @@ class ListsController < ApplicationController
 	end
 
 	def edit
-
+		@genre = Genre.where(user: current_user)
 	end
 
 	def show
@@ -49,6 +50,6 @@ class ListsController < ApplicationController
 
 	end
 	def list_params
-		params.require(:list).permit(:title).merge(user:current_user)
+		params.require(:list).permit(:title,:genre_id).merge(user:current_user)
 	end
 end

@@ -7,6 +7,8 @@
       <span><%= f.label :リスト名 %></span>
       <p><%= f.text_field :title, class: "form-control" %></p>
       <br>
+      <span><%= f.label :タグ名 %></span>
+           <p><%= f.collection_select :genre_id,@genre,:id, :title, {include_blank: "選択してください"}, {class: 'list-tag'} %></p>
       <%= f.submit "編集する",class:"btn-list btn-success btn-lg"%>
     <% end %>
 </div>
