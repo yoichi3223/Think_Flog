@@ -185,7 +185,6 @@ padding-bottom:80px;
     margin: 0;
     font-size:25px;
     font-weight:bold;
-    
 }
 
 
@@ -193,13 +192,13 @@ padding-bottom:80px;
 	background-image:url(about-visual.jpg);
 	background-size: cover;
 	background-position:center;
-	height:600px;
+	height:400px;
 	width: 100%;
 }
 .about-h1{
 	text-align: center;
 	padding-top: 20px;
-	font-size:80px;
+	font-size:50px;
 	font-weight: bold;
 	border-bottom:dashed 11px #5cb7cc;
 	color: #5cb7cc;
@@ -217,8 +216,10 @@ padding-bottom:80px;
     margin-right: 10px;
 }
 .media__image img{
-	height: 450px;
-	width: 600px;
+    margin-left:90px;
+	height: 300px;
+	width: 500px;
+    border-radius:10px;
 }
 
 .media__summary {
@@ -227,13 +228,17 @@ padding-bottom:80px;
 }
 .media__heading {
 	padding-top:50px;
-    font-size: 80px;
+    padding-left:20px;
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align:left
 }
 .media__text {
-    font-size: 50px;
+    font-size: 30px;
+    padding-left:20px;
     color: #5cb7cc;
+    text-align:left
 }
 .about{
 	width:2000px;

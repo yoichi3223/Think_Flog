@@ -3,8 +3,9 @@
 
     <%= form_with model: @user, url: { action: :update }, html: {}, local: true do |f| %>
     <div class = "user-contents">
-　　　　<label>プロフィール画像</label>
-        <%= attachment_image_tag @user,:image,size:"250x250" ,fallback: "no_image.png"%>
+
+
+        <p><%= attachment_image_tag @user,:image,size:"250x250" ,fallback: "no_image.png"%></p>
        <%= f.attachment_field :image ,id: "item_image" %>
    </div>
 
@@ -24,7 +25,7 @@
     </div>
 
     <div class = "user-contents">
-    <%= f.submit "編集する",class:"btn-card btn-success btn-lg" %>
+    <%= f.submit "編集する",class:"btn btn-success btn-lg" %>
     </div>
 
     <% end %>
