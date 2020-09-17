@@ -1,5 +1,5 @@
 class Genre < ApplicationRecord
-	has_many :lists,dependent: :destroy
+	has_many :lists
 	belongs_to :user
 	enum status: {
 		 true: 0,

@@ -16,7 +16,7 @@ class GenresController < ApplicationController
   	@genre = Genre.new(genre_params)
     @genre.user_id = current_user.id
     if @genre.save
-      flash[:notice] = "ジャンルを作成しました"
+      flash[:notice] = "タグを作成しました"
       redirect_to user_genres_path
      else
      	render action: :index
@@ -26,7 +26,7 @@ class GenresController < ApplicationController
   def update
  	@genre =  Genre.find(params[:id])
   if @genre.update(genre_params)
-  	flash[:notice] = "ジャンルを更新しました"
+  	flash[:notice] = "タグを更新しました"
   	redirect_to user_genres_path
   else
   	render action: :render
@@ -35,11 +35,11 @@ class GenresController < ApplicationController
 
   end
   def destroy
-  	@user = currnet_user.id
   	@genre =  Genre.find(params[:id])
-  	@genre.destroy
-  	flash[:aleart] = "ジャンルを削除しました"
-  	redirect_to genres_path
+  	@genre.user_id = current_user.id
+    @genre.destroy
+  	flash[:alert] = "タグを削除しました"
+  	redirect_to user_genres_path
   end
 
   private

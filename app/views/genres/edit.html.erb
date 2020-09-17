@@ -1,9 +1,16 @@
+<div class ="genre">
+	<div class ="genre-box">
 
+
+
+<div class = "genre-edit-form">
+	<h1>タグ編集</h1>
 <%= form_for @genre, url:user_genre_path,method: :patch do |f| %>
-ジャンル
-<%= f.text_field :title %>
-<%= f.radio_button :status ,true %>有効
-<%= f.radio_button :status ,false %>無効
-<%= f.submit "変更を保存する",class: "btn btn-info" %>
+<%= f.text_field :title, class: "form-control" %>
+<%= f.radio_button :status ,true %><span class = "genre-text">有効</span>
+<%= f.radio_button :status ,false %><span class = "genre-text">無効</span>
+<%= f.submit "編集する",class:"btn btn-success btn-lg" %>
 <% end %>
-
+</div>
+  </div>
+     </div>
