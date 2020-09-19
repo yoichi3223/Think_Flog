@@ -1,32 +1,32 @@
 class MessagesController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :confirm, :done]
+      before_action :authenticate_user!, except: [:index, :confirm, :done]
+
   def index
-    @message = Message.new
+      @message = Message.new
   end
 
   def confirm
-    @message = Message.new(message_params)
+      @message = Message.new(message_params)
     if @message.valid?
-      render :action => 'confirm'
+       render :action => 'confirm'
     else
-      render :action => 'index'
+       render :action => 'index'
     end
   end
 
   def done
-    @message = Message.new(message_params)
+      @message = Message.new(message_params)
     if params[:back]
-      render :action => 'index'
+       render :action => 'index'
     else
-      MessageMailer.received_email(@message).deliver_now
-      flash[:notice] = "お問い合わせを受け付けました"
-      render :action => 'done'
+       MessageMailer.received_email(@message).deliver_now
+       flash[:notice] = "お問い合わせを受け付けました"
+       render :action => 'done'
     end
   end
 
   private
-
   def message_params
-    params.require(:message).permit(:name, :email, :content)
+      params.require(:message).permit(:name, :email, :content)
   end
 end
