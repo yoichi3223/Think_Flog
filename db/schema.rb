@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_16_063033) do
+ActiveRecord::Schema.define(version: 2020_09_18_052305) do
 
   create_table "cards", force: :cascade do |t|
     t.string "title", limit: 255, null: false
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2020_09_16_063033) do
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "genre_id"
+    t.integer "genre_id", null: false
     t.index ["user_id"], name: "index_lists_on_user_id"
   end
 

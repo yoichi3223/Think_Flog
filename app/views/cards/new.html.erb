@@ -4,8 +4,15 @@
       <%= f.hidden_field :list_id, value: @list.id %>
         <span><%= f.label :タイトル %></span>
         <p><%= f.text_field :title, autofocus: true, class: "form-control", placeholder: "カード名" %></p>
+        <% if @card.errors.include?(:title) %>
+       <p style="color: red;"><%= @card.errors.full_messages_for(:title).first %>
+     <% end %>
+        <br>
         <span><%= f.label :メモ %></span>
         <p><%= f.text_area :memo, autofocus: true, class: "form-control", placeholder: "詳細" %></p>
+        <% if @card.errors.include?(:memo) %>
+       <p style="color: red;"><%= @card.errors.full_messages_for(:memo).first %>
+     <% end %>
         <br>
     <%= f.submit "作成する",class:"btn-list btn-success btn-lg" %>
     <% end %>

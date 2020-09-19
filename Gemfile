@@ -51,6 +51,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'rubocop-airbnb'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -63,7 +64,7 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
-#本番環境デプロイgem
+# 本番環境デプロイgem
 gem 'dotenv-rails'
 group :production do
   gem 'mysql2'
@@ -88,5 +89,4 @@ gem "refile-mini_magick"
 gem 'simple_form'
 gem 'enum_help'
 gem 'rails-i18n', '~> 5.1'
-gem 'kaminari','~> 1.2.1'
-
+gem 'kaminari', '~> 1.2.1'

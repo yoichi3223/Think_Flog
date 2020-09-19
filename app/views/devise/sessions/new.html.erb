@@ -31,7 +31,11 @@ Have notes every day!!</p>
     <%= f.submit "ログインする",class:"btn btn-lg btn-primary btn-block" %>
   </div>
 <% end %>
-
+<div>
+<%= link_to user_facebook_omniauth_authorize_path do %>
+<img src = "/assets/facebook.png" class = "facebook-login" >
+<% end %>
+</div>
   </div>
 </div>
 
