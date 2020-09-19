@@ -2,9 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
  .main-visual{
-    height: 950px;
+    height: 800px;
 	width: 100%;
-	background-image: image-url("top-image1.jpg");
+	background-image: image-url("top-image.jpg");
 	background-size:cover;
 	background-position: center;
 	}
@@ -13,12 +13,12 @@
 	 padding-top:300px;
 	}
 .main-visual-text .btn-danger{
-	width:800px;
-	height:130px;
+	width:500px;
+	height:100px;
 	border-radius:20px;
 	font-weight:bold;
-    font-size:70px;
-    line-height:130px;
+    font-size:50px;
+    line-height:100px;
 
 }
 
@@ -69,7 +69,7 @@
 .qa-contents h1{
 text-align:center;
 color:white;
-font-size:100px;
+font-size:80px;
 font-weight:bold;
 padding-bottom:80px;
 }
@@ -186,6 +186,11 @@ padding-bottom:80px;
     font-size:25px;
     font-weight:bold;
 }
+#back {
+  position: fixed;
+  right: 20px;
+  bottom: 130px;
+}
 
 
 .about-main-visual{
@@ -204,6 +209,10 @@ padding-bottom:80px;
 	color: #5cb7cc;
 	width:1000px;
 	margin: 0 auto;
+}
+#media-all{
+    display:none;
+    padding:30px 0 30px 50px;
 }
 .media {
     background: #FFF;

@@ -19,6 +19,11 @@
 $(function(){
 $('#homes-top-js').fadeIn(2200);
 });
+
+$(function(){
+$('#media-all').fadeIn(2200);
+});
+
 $(function(){
   //.accordion_oneの中の.accordion_headerがクリックされたら
   $('.s_02 .accordion_one .accordion_header').click(function(){
@@ -28,6 +33,14 @@ $(function(){
     //クリックされた.accordion_oneの中の.accordion_header以外の.accordion_oneの中の.accordion_headerに隣接する.accordion_oneの中の.accordion_innerを閉じる
     $('.s_02 .accordion_one .accordion_header').not($(this)).next('.accordion_one .accordion_inner').slideUp();
     $('.s_02 .accordion_one .accordion_header').not($(this)).removeClass("open");
+  });
+});
+$(function() {
+  $('#back a').on('click',function(event){
+    $('body, html').animate({
+      scrollTop:0
+    }, 1000);
+    event.preventDefault();
   });
 });
 

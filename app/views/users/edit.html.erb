@@ -12,11 +12,17 @@
 <div class = "user-contents">
     <label>お名前(性)</label>
     <p><%= f.text_field :family_name, autofocus: true, class: " input-mysize"%></p>
+    <% if @user.errors.include?(:family_name) %>
+       <p style="color: red;"><%= @user.errors.full_messages_for(:family_name).first %>
+     <% end %>
 </div>
 
 <div class = "user-contents">
         <label>お名前(名)</label>
         <p><%= f.text_field :first_name, autofocus: true, class: " input-mysize"%></p>
+        <% if @user.errors.include?(:first_name) %>
+       <p style="color: red;"><%= @user.errors.full_messages_for(:first_name).first %>
+     <% end %>
     </div>
 
     <div class = "user-contents">

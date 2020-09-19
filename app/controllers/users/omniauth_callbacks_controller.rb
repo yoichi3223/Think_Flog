@@ -4,6 +4,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private
+
   def callback_from(provider)
     provider = provider.to_s
 
@@ -17,5 +18,4 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to new_user_registration_url
     end
   end
-
 end
