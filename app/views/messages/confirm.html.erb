@@ -33,3 +33,14 @@
 <% end %>
 </div>
 </div>
+<script src="assets/bubbly-bg.js"></script>
+<script>bubbly({
+  blur:1,
+  colorStart: '#FFFFFF',
+  colorStop: '#112144',
+  radiusFunc:() => 5 + Math.random() * 20,
+  angleFunc:() => -Math.PI / 2,
+  velocityFunc:() => Math.random() * 5,
+  bubbleFunc:() => `hsla(${200 + Math.random() * 50}, 100%, 65%, .1)`,
+  bubbles:300
+});</script>

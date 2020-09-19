@@ -12,7 +12,8 @@ class ListsController < ApplicationController
        flash[:notice] = "リストを作成しました"
        redirect_to top_index_path
     else
-       render action: :new
+       @genre = Genre.where(user: current_user)
+       render  action: "new"
     end
   end
 
@@ -30,6 +31,7 @@ class ListsController < ApplicationController
        flash[:notice] = "リストを更新しました"
        redirect_to top_index_path
     else
+       @genre = Genre.where(user: current_user)
        render action: :edit
     end
   end

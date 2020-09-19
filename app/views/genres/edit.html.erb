@@ -5,6 +5,12 @@
 
 <div class = "genre-edit-form">
 	<h1>タグ編集</h1>
+	<% if @genre.errors.include?(:title) %>
+       <p style="color: red;"><%= @genre.errors.full_messages_for(:title).first %></p>
+     <% end %>
+     <% if @genre.errors.include?(:status) %>
+       <p style="color: red;"><%= @genre.errors.full_messages_for(:status).first %></p>
+     <% end %>
 <%= form_for @genre, url:user_genre_path,method: :patch do |f| %>
 <%= f.text_field :title, class: "form-control" %>
 <%= f.radio_button :status ,true %><span class = "genre-text">有効</span>
@@ -14,3 +20,14 @@
 </div>
   </div>
      </div>
+<script src="assets/bubbly-bg.js"></script>
+<script>bubbly({
+  blur:1,
+  colorStart: '#FFFFFF',
+  colorStop: '#112144',
+  radiusFunc:() => 5 + Math.random() * 20,
+  angleFunc:() => -Math.PI / 2,
+  velocityFunc:() => Math.random() * 5,
+  bubbleFunc:() => `hsla(${200 + Math.random() * 50}, 100%, 65%, .1)`,
+  bubbles:300
+});</script>

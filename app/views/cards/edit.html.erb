@@ -4,18 +4,29 @@
         <span><%= f.label :タイトル %></span>
         <p><%= f.text_field :title, autofocus: true, class: "form-control"%></p>
         <% if @card.errors.include?(:title) %>
-       <p style="color: red;"><%= @card.errors.full_messages_for(:title).first %>
+       <p style="color: red;"><%= @card.errors.full_messages_for(:title).first %></p>
      <% end %>
         <span><%= f.label :メモ %></span>
         <p><%= f.text_area :memo, autofocus: true, class: "form-control"%></p>
         <br>
         <span><label>リスト名</label></span>
-        <p><%= select :card, :list_id, @lists.map{ |l| [l.title, l.id] }, {}, { class: 'form-control' } %><p>
+        <p><%= select :card, :list_id, @list.map{ |l| [l.title, l.id] },{include_blank: "選択してください"} ,{ class: 'form-control' } %><p>
+            <br>
     <%= f.submit "編集する",class:"btn-card btn-success btn-lg" %>
     <% end %>
     </div>
 </div>
-
+<script src="assets/bubbly-bg.js"></script>
+<script>bubbly({
+  blur:1,
+  colorStart: '#FFFFFF',
+  colorStop: '#112144',
+  radiusFunc:() => 5 + Math.random() * 20,
+  angleFunc:() => -Math.PI / 2,
+  velocityFunc:() => Math.random() * 5,
+  bubbleFunc:() => `hsla(${200 + Math.random() * 50}, 100%, 65%, .1)`,
+  bubbles:300
+});</script>
 
 
 

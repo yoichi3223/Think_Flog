@@ -5,16 +5,26 @@
         <span><%= f.label :タイトル %></span>
         <p><%= f.text_field :title, autofocus: true, class: "form-control", placeholder: "カード名" %></p>
         <% if @card.errors.include?(:title) %>
-       <p style="color: red;"><%= @card.errors.full_messages_for(:title).first %>
+       <p style="color: red;"><%= @card.errors.full_messages_for(:title).first %></p>
      <% end %>
-        <br>
         <span><%= f.label :メモ %></span>
         <p><%= f.text_area :memo, autofocus: true, class: "form-control", placeholder: "詳細" %></p>
         <% if @card.errors.include?(:memo) %>
-       <p style="color: red;"><%= @card.errors.full_messages_for(:memo).first %>
+       <p style="color: red;"><%= @card.errors.full_messages_for(:memo).first %></p>
      <% end %>
         <br>
     <%= f.submit "作成する",class:"btn-list btn-success btn-lg" %>
     <% end %>
     </div>
 </div>
+<script src="assets/bubbly-bg.js"></script>
+<script>bubbly({
+  blur:1,
+  colorStart: '#FFFFFF',
+  colorStop: '#112144',
+  radiusFunc:() => 5 + Math.random() * 20,
+  angleFunc:() => -Math.PI / 2,
+  velocityFunc:() => Math.random() * 5,
+  bubbleFunc:() => `hsla(${200 + Math.random() * 50}, 100%, 65%, .1)`,
+  bubbles:300
+});</script>

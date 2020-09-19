@@ -9,11 +9,11 @@
       <br>
       <p><%= f.text_field :title,placeholder: "リストタイトルを入力してください" ,class:"form-control"%></p>
       <% if @list.errors.include?(:title) %>
-       <p style="color: red;"><%= @list.errors.full_messages_for(:title).first %>
+       <p style="color: red;"><%= @list.errors.full_messages_for(:title).first %></p>
      <% end %>
       <br>
        <span><%= f.label :タグ名 %></span>
-           <p><%= f.collection_select :genre_id,@genre,:id, :title, {:include_blank => true}, {class: 'list-tag'} %></p>
+           <p><%= f.collection_select :genre_id,@genre,:id, :title, {include_blank: "選択してください"}, {class: 'list-tag'} %></p>
            <% if @list.errors.include?(:genre_id) %>
        <p style="color: red;"><%= @list.errors.full_messages_for(:genre_id).first %>
      <% end %>
@@ -21,7 +21,16 @@
 
       <p><%= f.submit "作成する",class:"btn-list btn-success btn-lg" %></p>
     <% end %>
-
-
 </div>
 </div>
+<script src="assets/bubbly-bg.js"></script>
+<script>bubbly({
+  blur:1,
+  colorStart: '#FFFFFF',
+  colorStop: '#112144',
+  radiusFunc:() => 5 + Math.random() * 20,
+  angleFunc:() => -Math.PI / 2,
+  velocityFunc:() => Math.random() * 5,
+  bubbleFunc:() => `hsla(${200 + Math.random() * 50}, 100%, 65%, .1)`,
+  bubbles:300
+});</script>

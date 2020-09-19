@@ -1,8 +1,8 @@
 class GenresController < ApplicationController
+      before_action :set_genre, only: %i(index create)
   def index
       @user = current_user
       @genre = Genre.new
-      @genres = Genre.where(user: current_user)
   end
 
   def edit
@@ -11,7 +11,6 @@ class GenresController < ApplicationController
   end
 
   def create
-      @genres = Genre.where(user: current_user)
       @genre = Genre.new(genre_params)
       @genre.user_id = current_user.id
     if @genre.save
@@ -28,7 +27,7 @@ class GenresController < ApplicationController
        flash[:notice] = "タグを更新しました"
        redirect_to user_genres_path
     else
-       render action: :render
+       render action: :edit
     end
   end
 
@@ -43,5 +42,9 @@ class GenresController < ApplicationController
   private
   def genre_params
       params.require(:genre).permit(:title, :status, :user_id)
+  end
+
+  def set_genre
+      @genres = Genre.where(user: current_user)
   end
 end
