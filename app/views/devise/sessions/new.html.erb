@@ -21,14 +21,13 @@ Have notes every day!!</p>
   </div>
 <br>
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div style = "padding-left:47px;">
       <%= f.check_box :remember_me %>
-      <%= f.label :ログインを保持する %>
+      <%= f.label :ログイン情報を保持する %>
     </div>
   <% end %>
-
   <div class="actions">
-    <%= f.submit "ログインする",class:"btn btn-lg btn-primary btn-block" %>
+    <%= f.submit "ログインする",class:"btn-form btn-lg btn-primary" %>
   </div>
 <% end %>
 <div>

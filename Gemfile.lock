@@ -422,7 +422,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.11)
   rails (~> 5.2.4, >= 5.2.4.3)
-  rails-i18n (~> 5.1)
+  rails-i18n
   refile!
   refile-mini_magick
   rubocop-airbnb

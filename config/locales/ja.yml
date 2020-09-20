@@ -4,11 +4,11 @@ ja:
       status:
         true: "有効"
         false: "無効"
-
-ja:
   activerecord:
     models:
       user: "ユーザー"
+      list: "リスト"
+      card: "カード"
     attributes:
       user:
         family_name: "性"
@@ -16,21 +16,9 @@ ja:
         email: "メールアドレス"
         password: "パスワード"
         password_confirmation: "パスワード確認"
-
-ja:
-  activerecord:
-    models:
-      list: "リスト"
-    attributes:
       list:
         title: "リスト名"
         genre_id: "タグ名"
-
-ja:
-  activerecord:
-    models:
-      card: "カード"
-    attributes:
       card:
         title: "カード名"
         memo: "メモ"

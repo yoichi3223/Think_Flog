@@ -2,7 +2,7 @@
 lock "~> 3.14.1"
 
 set :application, "Think_Frog"
-set :repo_url, "https://github.com/yoichi3223/Think_Flog.git"
+set :repo_url, "git@github.com:yoichi3223/Think_Flog.git"
 set :deploy_to, "/home/ec2-user/Think_Frog"
 set :rbenv_ruby, '2.5.7'
 set :linked_files, %w{config/master.key .env}

@@ -6,7 +6,8 @@
 
 
         <p><%= attachment_image_tag @user,:image,size:"250x250" ,fallback: "no_image.png"%></p>
-       <%= f.attachment_field :image ,id: "item_image" %>
+        <br>
+       <%= f.attachment_field :image ,id: "item_image",style:"padding-left:100px;" %>
    </div>
 
 <div class = "user-contents">

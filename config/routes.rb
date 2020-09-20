@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   resources :users, only: %i(show edit update) do
     resources :genres
   end
+  put "/users/:id/hide" => "users#hide", as: 'users_hide'
 end

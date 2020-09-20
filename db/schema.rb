@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_18_052305) do
+ActiveRecord::Schema.define(version: 2020_09_20_060301) do
 
   create_table "cards", force: :cascade do |t|
     t.string "title", limit: 255, null: false
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2020_09_18_052305) do
     t.datetime "updated_at", null: false
     t.string "provider"
     t.string "uid"
+    t.boolean "is_deleted", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

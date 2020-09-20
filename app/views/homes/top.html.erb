@@ -3,6 +3,7 @@
 	<%= link_to '無料登録する', new_user_registration_path,class:"btn btn-danger" %>
 	</div>
 </div>
+
  <div class ="main-contents">
  <h1 class= "heading-main-contents">例えばこのような用途でご利用いただけます</h1>
  <div class = "contents" id ="homes-top-js">
@@ -25,6 +26,8 @@
  		<p>お買い物時のメモ</p>
 </section>
 </div>
+<div>
+<%= video_tag("/videos/sample.mp4", autoplay: :true, loop: :true, muted: :true, class: 'video-content') %></div>
 <div class ="qa">
 <div class ="qa-contents">
 <h1>Q&A</h1>
@@ -65,16 +68,11 @@
   </div>
 
 
-
-
   <span id="back">
       <a href="#">
         <%=image_tag "pagetop.jpg" %>
       </a>
     </span>
-
-
-
 
 
 
