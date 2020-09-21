@@ -15,7 +15,7 @@ Have notes every day!!</p>
     <% if resource.errors.any? %>
     <span style ="color:red;"><%= "性の入力に誤りがあります。"%></span>
     <% end %>
-<%= f.text_field :family_name, autocomplete: "family_name", size: "50x10",class:"form-control", :placeholder => "苗字を入力してください"  %>
+<%= f.text_field :family_name, autocomplete: "family_name", size: "50x10",class:"form-control", :placeholder => "苗字を入力してください",style:"margin-left:47px;"  %>
 
 <br>
 <div class="field">
@@ -23,7 +23,7 @@ Have notes every day!!</p>
     <% if resource.errors.any? %>
      <span style ="color:red;"><%= "名の入力に誤りがあります。"%></span>
     <% end %>
-<%= f.text_field :first_name, autocomplete: "first_name", size: "50x10",class:"form-control", :placeholder => "名前を入力してください" %>
+<%= f.text_field :first_name, autocomplete: "first_name", size: "50x10",class:"form-control", :placeholder => "名前を入力してください",style:"margin-left:47px;" %>
 </div>
 <br>
   <div class="field">
@@ -31,7 +31,7 @@ Have notes every day!!</p>
     <% if resource.errors.any? %>
      <span style ="color:red;"><%= "メールアドレスの入力に誤りがあります。"%></span>
     <% end %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", size: "50x10",class:"form-control", :placeholder => "メールアドレスを入力してください"  %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", size: "50x10",class:"form-control", :placeholder => "メールアドレスを入力してください",style:"margin-left:47px;"  %>
   </div>
 <br>
   <div class="field">
@@ -39,7 +39,7 @@ Have notes every day!!</p>
     <% if resource.errors.any? %>
      <span style ="color:red;"><%= "パスワードの入力に誤りがあります。"%></span>
     <% end %>
-    <%= f.password_field :password, autocomplete: "new-password", size: "50x10",class:"form-control" , :placeholder => "パスワードを6文字以上で入力してください" %>
+    <%= f.password_field :password, autocomplete: "new-password", size: "50x10",class:"form-control" , :placeholder => "パスワードを6文字以上で入力してください",style:"margin-left:47px;"%>
   </div>
 <br>
   <div class="field">
@@ -47,7 +47,7 @@ Have notes every day!!</p>
     <% if resource.errors.any? %>
      <span style ="color:red;"><%= "パスワード確認の入力に誤りがあります。"%></span>
     <% end %>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", size: "50x10",class:"form-control", :placeholder => "確認のため再度パスワードを入力してください" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", size: "50x10",class:"form-control", :placeholder => "確認のため再度パスワードを入力してください",style:"margin-left:47px;" %>
   </div>
   <br>
   <div class="actions">

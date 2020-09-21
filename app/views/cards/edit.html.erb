@@ -1,16 +1,16 @@
 <div class= "cards-contents">
    <div class ="card-form-edit">
     <%= form_with model: @card, url: { action: :update }, html: { class: 'cardnewForm' }, local: true do |f| %>
-        <span><%= f.label :タイトル %></span>
-        <p><%= f.text_field :title, autofocus: true, class: "form-control"%></p>
+        <span><%= f.label :カード名 %></span>
+        <p><%= f.text_field :title, autofocus: true, class: "form-control",style:"width:500px;"%></p>
         <% if @card.errors.include?(:title) %>
        <p style="color: red;"><%= @card.errors.full_messages_for(:title).first %></p>
      <% end %>
-        <span><%= f.label :メモ %></span>
-        <p><%= f.text_area :memo, autofocus: true, class: "form-control"%></p>
+        <span><%= f.label :メモ詳細 %></span>
+        <p><%= f.text_area :memo, autofocus: true, class: "form-control",style:"width:500px;"%></p>
         <br>
         <span><label>リスト名</label></span>
-        <p><%= select :card, :list_id, @list.map{ |l| [l.title, l.id] },{include_blank: "選択してください"} ,{ class: 'form-control' } %><p>
+        <p><%= select :card, :list_id, @list.map{ |l| [l.title, l.id] },{include_blank: "選択してください"} ,{ class: 'form-control',style:"width:500px;" } %><p>
             <br>
     <%= f.submit "編集する",class:"btn-card btn-success btn-lg" %>
     <% end %>

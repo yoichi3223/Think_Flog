@@ -12,12 +12,12 @@ Have notes every day!!</p>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :メールアドレス,style:"padding-left:50px;"%><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", size: "50x10",class:"form-control", :placeholder => "メールアドレスを入力してください" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", size: "50x10",class:"form-control", :placeholder => "メールアドレスを入力してください",style:"margin-left:47px;"%>
   </div>
 <br>
   <div class="field">
     <%= f.label :パスワード,style:"padding-left:50px;"%><br />
-    <%= f.password_field :password, autocomplete: "current-password", size: "50x10",class:"form-control", :placeholder => "パスワードを6文字以上で入力してください"  %>
+    <%= f.password_field :password, autocomplete: "current-password", size: "50x10",class:"form-control", :placeholder => "パスワードを6文字以上で入力してください",style:"margin-left:47px;"  %>
   </div>
 <br>
   <% if devise_mapping.rememberable? %>

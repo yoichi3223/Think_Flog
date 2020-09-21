@@ -2,28 +2,28 @@
 <div class ="contact-form">
 
 <%= form_for @message, :url => contact_done_path do |f| %>
-    <h2>お問い合わせ内容確認</h2>
+    <h2>お問合わせ内容確認</h2>
     <br>
     <div class ="contact-list">
       <span><label>名前</label></span>
-      <p>
+      <div class ="contact-list-message" >
         <%= f.hidden_field :name %>
         <%= @message.name %>
-      </p>
+      </div>
     </div>
     <div class ="contact-list">
       <span><label>メールアドレス</label></span>
-      <p>
+      <div class ="contact-list-message">
         <%= f.hidden_field :email %>
         <%= @message.email %>
-      </p>
+      </div>
     </div>
     <div class ="contact-list">
       <span><label>お問い合わせ内容</label></span>
-      <p>
+     <div class ="contact-list-message">
         <%= f.hidden_field :content %>
-        <%= simple_format(@message.content) %>
-      </p>
+        <%= @message.content%>
+      </div>
     </div>
     <br>
     <div>

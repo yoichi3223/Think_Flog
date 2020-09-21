@@ -3,7 +3,7 @@ class ListsController < ApplicationController
 
   def new
       @list = List.new
-      @genre = Genre.where(user: current_user)
+      @genre = Genre.where(user: current_user,status: :true)
   end
 
   def create

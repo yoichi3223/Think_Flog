@@ -7,7 +7,7 @@
       <span><%= f.label :リスト名 %></span>
       <br>
       <br>
-      <p><%= f.text_field :title,placeholder: "リストタイトルを入力してください" ,class:"form-control"%></p>
+      <p><%= f.text_field :title,placeholder: "リストタイトルを入力してください" ,class:"form-control",style:"width:500px;"%></p>
       <% if @list.errors.include?(:title) %>
        <p style="color: red;"><%= @list.errors.full_messages_for(:title).first %></p>
      <% end %>
