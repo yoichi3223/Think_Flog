@@ -26,8 +26,6 @@
  		<p>お買い物時のメモ</p>
 </section>
 </div>
-<div>
-<%= video_tag("sample.mp4", autoplay: :true, loop: :true, muted: :true, class: 'video-content') %></div>
 <div class ="qa">
 <div class ="qa-contents">
 <h1>Q&A</h1>
@@ -68,19 +66,29 @@
   </div>
 
 
+
   <span id="back">
       <a href="#">
         <%=image_tag "pagetop.jpg" %>
       </a>
     </span>
 
-
-
-
-
-
-
-
 </div>
 </div>
   </div>
+
+         <div class = "video-area clearfix">
+     <div class = "video">
+     <%= video_tag("top-video.mp4", autoplay: :true, loop: :true, muted: :true, class: 'video-content') %>
+      </div>
+<div class = "video-text">
+<%= link_to 'さっそく使ってみる', new_user_registration_path,class:"btn btn-success" %>
+</div>
+</div>
+
+
+
+
+
+
+

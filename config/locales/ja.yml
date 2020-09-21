@@ -23,3 +23,7 @@ ja:
         title: "カード名"
         memo: "メモ"
         list_id: "メモ"
+      genre:
+        title: "タグ名"
+        status: "有効状態"
+
