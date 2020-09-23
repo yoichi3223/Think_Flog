@@ -1,28 +1,32 @@
-<div class = "cards-contents">
-<div class ="card-form-show">
-    <h2>カード詳細</h2>
-    <br>
-    <div class ="card-list-show">
-        <span><label>カード名</label></span>
-        <p><%= @card.title %></p>
+          <div class = "cards-contents">
+        <div class ="card-form-show">
+      <h2>カード詳細</h2>
+      <br>
+      <div class ="card-list-show">
+          <span><label>カード名</label></span>
+          <p><%= @card.title %></p>
       </div>
 
-<div class ="card-list-show">
-        <span><label>メモ詳細</label></span>
-        <p><%= @card.memo %></p>
+      <div class ="card-list-show">
+          <span><label>メモ詳細</label></span>
+          <p><%= @card.memo %></p>
       </div>
-    <div class ="card-list-show">
-        <span><label>リスト名</label></span>
-      <p><%= @card.list.title %></p>
-    </div>
+
+      <div class ="card-list-show">
+          <span><label>リスト名</label></span>
+          <p><%= @card.list.title %></p>
+      </div>
        <br>
-      <div>
-        <%= link_to '編集する', edit_list_card_path(@card.list, @card), class:"btn-card btn-success btn-lg"%>
-        <%= link_to '削除する', list_card_path(@card.list, @card), class:"btn-card btn-danger btn-lg", method: :delete, data: { confirm: "このカードを削除して大丈夫ですか?" } %>
-      </div>
-</div>
-</div>
-<script src="assets/bubbly-bg.js"></script>
+
+        <div>
+      <%= link_to '編集する', edit_list_card_path(@card.list, @card), class:"btn-card btn-success btn-lg"%>
+      <%= link_to '削除する', list_card_path(@card.list, @card), class:"btn-card btn-danger btn-lg", method: :delete, data: { confirm: "このカードを削除して大丈夫ですか?" } %>
+       </div>
+          </div>
+              </div>
+
+
+    <script src="assets/bubbly-bg.js"></script>
 <script>bubbly({
   blur:1,
   colorStart: '#FFFFFF',

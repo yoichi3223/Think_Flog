@@ -1,27 +1,30 @@
-<div class ="genre-edit">
-	<div class ="genre-edit-box">
+             <div class ="genre-edit">
+	        <div class ="genre-edit-box">
+      <div class = "genre-edit-form">
 
+  <h1>タグ編集</h1>
+      <% if @genre.errors.include?(:title) %>
+          <p style="color: red;"><%= @genre.errors.full_messages_for(:title).first %></p>
+      <% end %>
 
+      <% if @genre.errors.include?(:status) %>
+          <p style="color: red;"><%= @genre.errors.full_messages_for(:status).first %></p>
+      <% end %>
 
-<div class = "genre-edit-form">
-	<h1>タグ編集</h1>
-	<% if @genre.errors.include?(:title) %>
-       <p style="color: red;"><%= @genre.errors.full_messages_for(:title).first %></p>
-     <% end %>
-     <% if @genre.errors.include?(:status) %>
-       <p style="color: red;"><%= @genre.errors.full_messages_for(:status).first %></p>
-     <% end %>
-<%= form_with model: [@user,@genre],url: user_genres_path,method: :post ,local: true do |form| %>
+  <%= form_with model: [@user,@genre],url: user_genres_path,method: :post ,local: true do |form| %>
+      <p class = "genre-inputform"><%= form.text_field :title, class: "form-control", placeholder: "タグ名を入力してください" %></p>
 
-<p class = "genre-inputform"><%= form.text_field :title, class: "form-control", placeholder: "タグ名を入力してください" %></p>
-  <p class = "radio-submit-form"><%= form.radio_button :status, :true %><span class = "genre-text">有効</span>
-  <%= form.radio_button :status, :false %><span class = "genre-text">無効</span>
-  <%= form.submit "作成する",class:"btn btn-success btn-lg" %></p>
-<% end %>
-</div>
-  </div>
-     </div>
-<script src="assets/bubbly-bg.js"></script>
+      <p class = "radio-submit-form"><%= form.radio_button :status, :true %><span class = "genre-text">有効</span>
+
+      <%= form.radio_button :status, :false %><span class = "genre-text">無効</span>
+
+      <%= form.submit "作成する",class:"btn btn-success btn-lg" %></p>
+  <% end %>
+        </div>
+            </div>
+                </div>
+
+  <script src="assets/bubbly-bg.js"></script>
 <script>bubbly({
   blur:1,
   colorStart: '#FFFFFF',

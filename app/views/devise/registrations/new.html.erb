@@ -1,43 +1,43 @@
-<div class="signup-entry-form" >
-  <div class="entry-form-contents">
+                    <div class="signup-entry-form" >
+                <div class="entry-form-contents">
+          <div class= "signup-left-side-contents">
+        <p class="signup-p">Let's sign up!!<br>
+        Have notes every day!!</p>
+          </div>
 
-    <div class= "signup-left-side-contents">
-      <p class="signup-p">Let's sign up!!<br>
-Have notes every day!!</p>
-</div>
+              <div class= "right-side-contents">
+            <div class = "form-contents">
+          <h1>無料登録</h1>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
-  <div class= "right-side-contents">
-<div class = "form-contents">
-  <h1>無料登録</h1>
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :性,style:"padding-left:50px;"%>
-    <% if resource.errors.any? %>
-    <span style ="color:red;"><%= "性の入力に誤りがあります。"%></span>
-    <% end %>
-<%= f.text_field :family_name, autocomplete: "family_name", size: "50x10",class:"form-control", :placeholder => "苗字を入力してください",style:"margin-left:47px;"  %>
-
-<br>
-<div class="field">
-    <%= f.label :名,style:"padding-left:50px;"%>
-    <% if resource.errors.any? %>
-     <span style ="color:red;"><%= "名の入力に誤りがあります。"%></span>
-    <% end %>
-<%= f.text_field :first_name, autocomplete: "first_name", size: "50x10",class:"form-control", :placeholder => "名前を入力してください",style:"margin-left:47px;" %>
-</div>
+   <div class="field">
+      <%= f.label :性,style:"padding-left:50px;"%>
+      <% if resource.errors.any? %>
+         <span style ="color:red;"><%= "性の入力に誤りがあります。"%></span>
+      <% end %>
+       <%= f.text_field :family_name, autocomplete: "family_name", size: "50x10",class:"form-control", :placeholder => "苗字を入力してください",style:"margin-left:47px;"  %>
+   </div>
 <br>
   <div class="field">
-    <%= f.label :メールアドレス,style:"padding-left:50px;"%>
-    <% if resource.errors.any? %>
-     <span style ="color:red;"><%= "メールアドレスの入力に誤りがあります。"%></span>
-    <% end %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", size: "50x10",class:"form-control", :placeholder => "メールアドレスを入力してください",style:"margin-left:47px;"  %>
+      <%= f.label :名,style:"padding-left:50px;"%>
+      <% if resource.errors.any? %>
+        <span style ="color:red;"><%= "名の入力に誤りがあります。"%></span>
+      <% end %>
+      <%= f.text_field :first_name, autocomplete: "first_name", size: "50x10",class:"form-control", :placeholder => "名前を入力してください",style:"margin-left:47px;" %>
+  </div>
+<br>
+  <div class="field">
+     <%= f.label :メールアドレス,style:"padding-left:50px;"%>
+     <% if resource.errors.any? %>
+        <span style ="color:red;"><%= "メールアドレスの入力に誤りがあります。"%></span>
+     <% end %>
+     <%= f.email_field :email, autofocus: true, autocomplete: "email", size: "50x10",class:"form-control", :placeholder => "メールアドレスを入力してください",style:"margin-left:47px;"  %>
   </div>
 <br>
   <div class="field">
     <%= f.label :パスワード,style:"padding-left:50px;"%>
     <% if resource.errors.any? %>
-     <span style ="color:red;"><%= "パスワードの入力に誤りがあります。"%></span>
+        <span style ="color:red;"><%= "パスワードの入力に誤りがあります。"%></span>
     <% end %>
     <%= f.password_field :password, autocomplete: "new-password", size: "50x10",class:"form-control" , :placeholder => "パスワードを6文字以上で入力してください",style:"margin-left:47px;"%>
   </div>
@@ -45,34 +45,35 @@ Have notes every day!!</p>
   <div class="field">
     <%= f.label :パスワード確認,style:"padding-left:50px;" %>
     <% if resource.errors.any? %>
-     <span style ="color:red;"><%= "パスワード確認の入力に誤りがあります。"%></span>
+       <span style ="color:red;"><%= "パスワード確認の入力に誤りがあります。"%></span>
     <% end %>
     <%= f.password_field :password_confirmation, autocomplete: "new-password", size: "50x10",class:"form-control", :placeholder => "確認のため再度パスワードを入力してください",style:"margin-left:47px;" %>
   </div>
-  <br>
+<br>
   <div class="actions">
     <%= f.submit "無料登録する",class:"btn-form btn-lg btn-primary" %>
   </div>
-<% end %>
+    <% end %>
 
-<div>
-<%= link_to user_facebook_omniauth_authorize_path do %>
-<%= image_tag  "facebook.png" ,class:"facebook-login" %>
-<% end %>
-</div>
+  　　<div>
+  <%= link_to user_facebook_omniauth_authorize_path do %>
+  <%= image_tag  "facebook.png" ,class:"facebook-login" %>
+  <% end %>
+   　</div>
 
-  </div>
-</div>
-  </div>
-</div>
-<script src="assets/bubbly-bg.js"></script>
-<script>bubbly({
-  blur:1,
-  colorStart: '#FFFFFF',
-  colorStop: '#112144',
-  radiusFunc:() => 5 + Math.random() * 20,
-  angleFunc:() => -Math.PI / 2,
-  velocityFunc:() => Math.random() * 5,
-  bubbleFunc:() => `hsla(${200 + Math.random() * 50}, 100%, 65%, .1)`,
-  bubbles:300
-});</script>
+      </div>
+          </div>
+              </div>
+                  </div>
+
+      <script src="assets/bubbly-bg.js"></script>
+  <script>bubbly({
+    blur:1,
+    colorStart: '#FFFFFF',
+    colorStop: '#112144',
+    radiusFunc:() => 5 + Math.random() * 20,
+    angleFunc:() => -Math.PI / 2,
+    velocityFunc:() => Math.random() * 5,
+    bubbleFunc:() => `hsla(${200 + Math.random() * 50}, 100%, 65%, .1)`,
+    bubbles:300
+  });</script>

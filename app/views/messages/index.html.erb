@@ -1,40 +1,41 @@
-<div class = "contact-contents">
-<div class ="contact-form">
-<%= form_for(@message, url: { action: :confirm }) do |f| %>
-<% if @message.errors.present? %>
-        <div>
-          <strong style = "color:red;">入力内容にエラーがあります</strong>
-          <ul>
-            <% @message.errors.each do |attr, error| %>
-              <li><%= error %></li>
-            <% end %>
-          </ul>
+        <div class = "contact-contents">
+     <div class ="contact-form">
+    <%= form_for(@message, url: { action: :confirm }) do |f| %>
+          <% if @message.errors.present? %>
+            <div>
+              <strong style = "color:red;">入力内容にエラーがあります</strong>
+              <ul>
+                <% @message.errors.each do |attr, error| %>
+                  <li><%= error %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+        <h2>お問い合わせフォーム</h2>
+        <br>
+        <div class ="contact-list">
+          <span><label>名前</label></span>
+          <p><%= f.text_field :name, placeholder: '20文字以内で入力してください',class:"form-control",style:"width:500px;"%></p>
         </div>
-      <% end %>
-    <h2>お問い合わせフォーム</h2>
-    <br>
-    <div class ="contact-list">
-      <span><label>名前</label></span>
-      <p><%= f.text_field :name, placeholder: '20文字以内で入力してください',class:"form-control",style:"width:500px;"%></p>
-    </div>
 
-    <div class ="contact-list">
-     <span><label>メールアドレス</label></span>
-      <p><%= f.text_field :email, placeholder: '30文字以内以内で入力してください',class:"form-control",style:"width:500px;" %></p>
-    </div>
+        <div class ="contact-list">
+         <span><label>メールアドレス</label></span>
+          <p><%= f.text_field :email, placeholder: '30文字以内以内で入力してください',class:"form-control",style:"width:500px;" %></p>
+        </div>
 
-    <div class ="contact-list">
-      <span><label>内容</label></span>
-      <p><%= f.text_area :content, placeholder: '200文字以内以内で入力してください',class:"form-control",style:"width:500px;" %></p>
-    </div>
-    <br>
-<div>
+        <div class ="contact-list">
+          <span><label>内容</label></span>
+          <p><%= f.text_area :content, placeholder: '200文字以内以内で入力してください',class:"form-control",style:"width:500px;" %></p>
+        </div>
+        <br>
+    <div>
       <%= f.submit '確認画面へ進む',class:"btn-list btn-success btn-lg"%>
-  </div>
-<% end %>
-</div>
-</div>
-<script src="assets/bubbly-bg.js"></script>
+    </div>
+    <% end %>
+         </div>
+             </div>
+
+  <script src="assets/bubbly-bg.js"></script>
 <script>bubbly({
   blur:1,
   colorStart: '#FFFFFF',

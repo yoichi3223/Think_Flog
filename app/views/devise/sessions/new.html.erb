@@ -1,55 +1,55 @@
-<div class="login-form" >
-  <div class="login-form-contents">
+               <div class="login-form" >
+          <div class="login-form-contents">
+      <div class= "login-leftside-contents">
+          <p class="login-text">Let's log in!!<br>
+          Have notes every day!!</p>
+      </div>
 
-    <div class= "login-leftside-contents">
-      <p class="login-text">Let's log in!!<br>
-Have notes every day!!</p>
-</div>
-
-  <div class= "login-right-side-contents">
-<div class = "form-contents">
-  <h1>ログイン</h1>
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :メールアドレス,style:"padding-left:50px;"%><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", size: "50x10",class:"form-control", :placeholder => "メールアドレスを入力してください",style:"margin-left:47px;"%>
-  </div>
+          <div class= "login-right-side-contents">
+       <div class = "form-contents">
+          <h1>ログイン</h1>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  
+      <div class="field">
+        <%= f.label :メールアドレス,style:"padding-left:50px;"%><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", size: "50x10",class:"form-control", :placeholder => "メールアドレスを入力してください",style:"margin-left:47px;"%>
+    </div>
 <br>
-  <div class="field">
-    <%= f.label :パスワード,style:"padding-left:50px;"%><br />
-    <%= f.password_field :password, autocomplete: "current-password", size: "50x10",class:"form-control", :placeholder => "パスワードを6文字以上で入力してください",style:"margin-left:47px;"  %>
+    <div class="field">
+      <%= f.label :パスワード,style:"padding-left:50px;"%><br />
+      <%= f.password_field :password, autocomplete: "current-password", size: "50x10",class:"form-control", :placeholder => "パスワードを6文字以上で入力してください",style:"margin-left:47px;"  %>
   </div>
 <br>
   <% if devise_mapping.rememberable? %>
-    <div style = "padding-left:47px;">
-      <%= f.check_box :remember_me %>
-      <%= f.label :ログイン情報を保持する %>
-    </div>
+      <div style = "padding-left:47px;">
+        <%= f.check_box :remember_me %>
+        <%= f.label :ログイン情報を保持する %>
+      </div>
   <% end %>
+
   <div class="actions">
-    <%= f.submit "ログインする",class:"btn-form btn-lg btn-primary" %>
+     <%= f.submit "ログインする",class:"btn-form btn-lg btn-primary" %>
   </div>
-<% end %>
-<div>
-<%= link_to user_facebook_omniauth_authorize_path do %>
+ <% end %>
+
+     <div>
+  <%= link_to user_facebook_omniauth_authorize_path do %>
 <%= image_tag "facebook.png", class:"facebook-login" %>
-<% end %>
-</div>
-  </div>
-</div>
+  <% end %>
+     </div>
+        </div>
+            </div>
+                </div>
+                    </div>
 
-
-
-  </div>
-</div>
-<script src="assets/bubbly-bg.js"></script>
-<script>bubbly({
-  blur:1,
-  colorStart: '#FFFFFF',
-  colorStop: '#112144',
-  radiusFunc:() => 5 + Math.random() * 20,
-  angleFunc:() => -Math.PI / 2,
-  velocityFunc:() => Math.random() * 5,
-  bubbleFunc:() => `hsla(${200 + Math.random() * 50}, 100%, 65%, .1)`,
-  bubbles:300
-});</script>
+    <script src="assets/bubbly-bg.js"></script>
+  <script>bubbly({
+    blur:1,
+    colorStart: '#FFFFFF',
+    colorStop: '#112144',
+    radiusFunc:() => 5 + Math.random() * 20,
+    angleFunc:() => -Math.PI / 2,
+    velocityFunc:() => Math.random() * 5,
+    bubbleFunc:() => `hsla(${200 + Math.random() * 50}, 100%, 65%, .1)`,
+    bubbles:300
+  });</script>

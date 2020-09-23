@@ -1,50 +1,55 @@
-<div class ="genre">
-	<div class ="genre-box">
+                  <div class ="genre">
+	          <div class ="genre-box">
+        <div class= "genre-form">
 
-<div class= "genre-form">
-	<% if @genre.errors.include?(:title) %>
+  　　<% if @genre.errors.include?(:title) %>
        <p style="color: red;"><%= @genre.errors.full_messages_for(:title).first %></p>
      <% end %>
+
      <% if @genre.errors.include?(:status) %>
        <p style="color: red;"><%= @genre.errors.full_messages_for(:status).first %></p>
      <% end %>
-<%= form_with model: [@user,@genre],url: user_genres_path,method: :post ,local: true do |form| %>
 
-<p class = "genre-inputform"><%= form.text_field :title, class: "form-control", placeholder: "タグ名を入力してください" %></p>
-  <p class = "radio-submit-form"><%= form.radio_button :status, :true %><span class = "genre-text">有効</span>
-  <%= form.radio_button :status, :false %><span class = "genre-text">無効</span>
-  <%= form.submit "作成する",class:"btn btn-success btn-lg" %></p>
-<% end %>
-</div>
-<table class="table" style = "width:1000px;">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">タグ名</th>
-      <th scope="col">有効有無</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody> 
-    <% i =1 %>
-    <% @genres.each do |genre|%>
-    <tr>
-      <td scope="row"><%=i%></td>
-      <td><%= genre.title %></td>
-      <td><%= genre.status_i18n %></td>
-      <td><%= link_to "編集", edit_user_genre_path(genre.user,genre) ,class: "btn btn-success" %></td>
-      <td><%= link_to "削除", user_genre_path(genre.user,genre) ,class: "btn btn-danger", method: :delete, data: { confirm: "このタグを削除して大丈夫ですか?" } %></td>
-    </tr>
+　　　<%= form_with model: [@user,@genre],url: user_genres_path,method: :post ,local: true do |form| %>
+
+  　　　<p class = "genre-inputform"><%= form.text_field :title, class: "form-control", placeholder: "タグ名を入力してください" %></p>
+
+      <p class = "radio-submit-form"><%= form.radio_button :status, :true %><span class = "genre-text">有効</span>
+
+      <%= form.radio_button :status, :false %><span class = "genre-text">無効</span>
+      <%= form.submit "作成する",class:"btn btn-success btn-lg" %></p>
+  <% end %>
+        </div>
+
+        <table class="table" style = "width:1000px;">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">タグ名</th>
+        <th scope="col">有効有無</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% i =1 %>
+      <% @genres.each do |genre|%>
+      <tr>
+          <td scope="row"><%=i%></td>
+          <td><%= genre.title %></td>
+          <td><%= genre.status_i18n %></td>
+          <td><%= link_to "編集", edit_user_genre_path(genre.user,genre) ,class: "btn btn-success" %></td>
+          <td><%= link_to "削除", user_genre_path(genre.user,genre) ,class: "btn btn-danger", method: :delete, data: { confirm: "このタグを削除して大丈夫ですか?" } %></td>
+      </tr>
   </tbody>
-  <% i+=1%>
-   <% end %>
-</table>
+    <% i+=1%>
+      <% end %>
+          </table>
+              </div>
+                  </div>
 
-
-</div>
-</div>
-<script src="assets/bubbly-bg.js"></script>
+  <script src="assets/bubbly-bg.js"></script>
 <script>bubbly({
   blur:1,
   colorStart: '#FFFFFF',

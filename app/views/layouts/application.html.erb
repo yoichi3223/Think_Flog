@@ -9,18 +9,17 @@
   </head>
   <body>
 <header>
-  <nav>
-<div class = header-logo>
-<i class="fas fa-frog "></i>
-<strong><p class ="logo-name">ThinkFrog</p></strong>
-</div>
-<% if user_signed_in? %>
-<%= render 'layouts/after_login'%>
-<% else %>
-<%= render 'layouts/before_login'%>
-<% end %>
-</nav>
-
+      <nav>
+                <div class = header-logo>
+          <i class="fas fa-frog "></i>
+        <strong><p class ="logo-name">ThinkFrog</p></strong>
+                </div>
+        <% if user_signed_in? %>
+            <%= render 'layouts/after_login'%>
+        <% else %>
+            <%= render 'layouts/before_login'%>
+        <% end %>
+      </nav>
 </header>
     <%= yield %>
 
@@ -34,17 +33,15 @@
       </script>
     <% end %>
 <!-- フッタhtml -->
-<footer>
-    <p class = "footer_copyright">© 2020 Yoichi Hashimoto. All Rights Reserved.</p>
-   <div class = "icons">
-<i class="fab fa-github fa-lg github"></i>
-<i class="fab fa-facebook-square fa-lg fb"></i>
-<i class="fab fa-twitter fa-lg twitter"></i>
-   </div>
+  <footer>
+      <p class = "footer_copyright">© 2020 Yoichi Hashimoto. All Rights Reserved.</p>
+     <div class = "icons">
+      <%= link_to "https://github.com/yoichi3223/Think_Flog" do %>
+         <i class="fab fa-github fa-lg github"></i>
+      <% end %>
+        <!-- <i class="fab fa-facebook-square fa-lg fb"></i>
+        <i class="fab fa-twitter fa-lg twitter"></i> -->
+     </div>
  </footer>
-
-
-
-
-  </body>
-</html>
+    </body>
+      </html>

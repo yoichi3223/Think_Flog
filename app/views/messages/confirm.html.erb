@@ -1,39 +1,43 @@
-<div class = "contact-contents">
-<div class ="contact-form">
+        <div class = "contact-contents">
+     <div class ="contact-form">
 
-<%= form_for @message, :url => contact_done_path do |f| %>
-    <h2>お問合わせ内容確認</h2>
-    <br>
-    <div class ="contact-list">
-      <span><label>名前</label></span>
-      <div class ="contact-list-message" >
-        <%= f.hidden_field :name %>
-        <%= @message.name %>
+  <%= form_for @message, :url => contact_done_path do |f| %>
+      <h2>お問合わせ内容確認</h2>
+      <br>
+      <div class ="contact-list">
+        <span><label>名前</label></span>
+        <div class ="contact-list-message" >
+          <%= f.hidden_field :name %>
+          <%= @message.name %>
+        </div>
       </div>
-    </div>
-    <div class ="contact-list">
-      <span><label>メールアドレス</label></span>
-      <div class ="contact-list-message">
-        <%= f.hidden_field :email %>
-        <%= @message.email %>
+
+      <div class ="contact-list">
+        <span><label>メールアドレス</label></span>
+        <div class ="contact-list-message">
+          <%= f.hidden_field :email %>
+          <%= @message.email %>
+        </div>
       </div>
-    </div>
-    <div class ="contact-list">
-      <span><label>お問い合わせ内容</label></span>
-     <div class ="contact-list-message">
-        <%= f.hidden_field :content %>
-        <%= @message.content%>
+
+      <div class ="contact-list">
+        <span><label>お問い合わせ内容</label></span>
+       <div class ="contact-list-message">
+          <%= f.hidden_field :content %>
+          <%= @message.content%>
+        </div>
       </div>
-    </div>
-    <br>
-    <div>
-      <%= f.submit '戻る', name: 'back' ,class:"btn btn-danger btn-lg"%>
-      <%= f.submit '送信する',class:"btn btn-success btn-lg"%>
-    </div>
-<% end %>
-</div>
-</div>
-<script src="assets/bubbly-bg.js"></script>
+      <br>
+
+      <div>
+        <%= f.submit '戻る', name: 'back' ,class:"btn btn-danger btn-lg"%>
+        <%= f.submit '送信する',class:"btn btn-success btn-lg"%>
+      </div>
+  <% end %>
+     </div>
+         </div>
+
+  <script src="assets/bubbly-bg.js"></script>
 <script>bubbly({
   blur:1,
   colorStart: '#FFFFFF',
