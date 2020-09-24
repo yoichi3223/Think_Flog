@@ -7,19 +7,21 @@
 	background-color:rgba(0,128,0,0.9);
 	padding-top:70px;
 }
-.user-contents-box{
-height:800px;
-width:25%;
-background-color:#f5f5f5;
-margin:0 auto;
 
-border-radius:10px;
-padding-top:50px;
+.user-contents-box{
+	height:800px;
+	width:25%;
+	background-color:#f5f5f5;
+	margin:0 auto;
+	border-radius:10px;
+	padding-top:50px;
 }
+
 .user-contents{
 	margin-bottom: 20px;
 	text-align:center;
 }
+
 .user-contents label{
 	font-size:25px;
 	font-weight:bold;
@@ -27,6 +29,7 @@ padding-top:50px;
 	border-radius:5px;
 	width:300px;
 }
+
 .user-contents p{
 font-size:23px;
 	width:300px;
@@ -35,12 +38,13 @@ font-size:23px;
 	.input-mysize{
 	width:300px;
 }
-	.user-editcontents-box{
-height:800px;
-width:500px;
-background-color:#f5f5f5;
-margin:0 auto;
-text-align:center;
-border-radius:10px;
-padding-top:50px;
+
+.user-editcontents-box{
+	height:800px;
+	width:500px;
+	background-color:#f5f5f5;
+	margin:0 auto;
+	text-align:center;
+	border-radius:10px;
+	padding-top:50px;
 }

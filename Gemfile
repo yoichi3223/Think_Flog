@@ -83,6 +83,7 @@ gem "bootstrap-sass", "~>3.3.6"
 gem "jquery-rails"
 gem "jquery-ui-rails"
 gem 'omniauth'
+gem "omniauth-rails_csrf_protection"
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
