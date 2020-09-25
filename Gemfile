@@ -45,6 +45,7 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano3-puma'
   gem 'capistrano-rbenv'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -86,6 +87,7 @@ gem 'omniauth'
 gem "omniauth-rails_csrf_protection"
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
+gem 'omniauth-line'
 gem 'omniauth-twitter'
 gem "toastr-rails"
 gem 'acts_as_list'

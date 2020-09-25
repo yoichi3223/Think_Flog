@@ -26,17 +26,20 @@
         <%= f.label :ログイン情報を保持する %>
       </div>
   <% end %>
-
   <div class="actions">
      <%= f.submit "ログインする",class:"btn-form btn-lg btn-primary" %>
   </div>
  <% end %>
-
-     <div>
-  <%= link_to user_facebook_omniauth_authorize_path, method: :post do %>
-<%= image_tag "facebook.png", class:"facebook-login" %>
+ <h4 class ="sns-login">SNSアカウントでログイン</h4>
+<div>
+<%= link_to user_google_oauth2_omniauth_authorize_path, method: :post do%>
+      <%= image_tag  "google.png",class:"snslogin-icon" %>
+<% end %>
+<%= link_to user_facebook_omniauth_authorize_path, method: :post do %>
+<%= image_tag "facebook.png", class:"snslogin-icon-facebook" %>
   <% end %>
-     </div>
+   　</div>
+
         </div>
             </div>
                 </div>

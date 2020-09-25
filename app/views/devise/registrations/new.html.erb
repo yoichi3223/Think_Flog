@@ -54,13 +54,17 @@
     <%= f.submit "無料登録する",class:"btn-form btn-lg btn-primary" %>
   </div>
     <% end %>
-
-  　　<div>
-  <%= link_to user_facebook_omniauth_authorize_path, method: :post do %>
-  <%= image_tag  "facebook.png" ,class:"facebook-login" %>
+    <h4 class ="sns-login">SNSアカウントで無料登録</h4>
+    <div>
+<%= link_to user_google_oauth2_omniauth_authorize_path, method: :post do%>
+      <%= image_tag  "google.png" ,class:"snslogin-icon" %>
+<% end %>
+<%= link_to user_facebook_omniauth_authorize_path, method: :post do %>
+  <%= image_tag  "facebook.png" ,class:"snslogin-icon-facebook" %>
   <% end %>
    　</div>
-<%= link_to "google",user_google_oauth2_omniauth_authorize_path, method: :post%>
+
+
       </div>
           </div>
               </div>
