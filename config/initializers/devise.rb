@@ -309,5 +309,5 @@
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
-   config.omniauth :facebook, FACEBOOK_ID='5023690497656428', FACEBOOK_SECRET_KEY='1d0542fca0921551d9dd471d143c41ac'
+   config.omniauth :facebook, ENV['FACEBOOK_ID'],ENV['FACEBOOK_SECRET_KEY']
 end
