@@ -96,9 +96,9 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
       :address => "smtp.gmail.com",
       :port => 587,
-      :domain => "gmail.com",
-      :user_name => 'yoichi3223@gmail.com',
-      :password => "fryraubsiilsybxb", #2段階認証パスワード
+      :domain => ENV['domain'],
+      :user_name => ENV['user_name'],
+      :password => ENV['password'], #2段階認証パスワード
       :authentication => :plain,
       :enable_starttls_auto => true
   }
