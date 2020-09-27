@@ -11,14 +11,14 @@
           <p style="color: red;"><%= @genre.errors.full_messages_for(:status).first %></p>
       <% end %>
 
-  <%= form_with model: [@user,@genre],url: user_genres_path,method: :post ,local: true do |form| %>
+  <%= form_with model: [@user,@genre],url: user_genre_path,method: :patch ,local: true do |form| %>
       <p class = "genre-inputform"><%= form.text_field :title, class: "form-control", placeholder: "タグ名を入力してください" %></p>
 
       <p class = "radio-submit-form"><%= form.radio_button :status, :true %><span class = "genre-text">有効</span>
 
       <%= form.radio_button :status, :false %><span class = "genre-text">無効</span>
 
-      <%= form.submit "作成する",class:"btn btn-success btn-lg" %></p>
+      <%= form.submit "編集する",class:"btn btn-success btn-lg" %></p>
   <% end %>
         </div>
             </div>
