@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .topPage {
-  min-height: 95vh;
+  min-height: 100vh;
   padding-top: 30px;
   background-image:url(https://source.unsplash.com/category/Wallpapers
 );
@@ -29,13 +29,13 @@
         align-items: center;
         justify-content: space-between;
         &_title {
-          font-size: 30px;
+          font-size: 20px;
           margin: 0;
         }
         &_action {
           .fa-pen, .fa-trash {
-            font-size: 18px;
-            color: #8c8c8c;
+            font-size: 15px;
+            color: #5cb7cc;
           }
           .fa-trash {
             margin-right: 10px;
@@ -51,7 +51,7 @@
           margin-bottom: 10px;
           padding: 10px;
           &_title {
-            font-size: 20px;
+            font-size: 15px;
           }
           &_detail {
             display: none;
