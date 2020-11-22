@@ -1,0 +1,28 @@
+
+            <div class="popup" id="js-popup">
+        <div class="popup-inner">
+    <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
+  
+ 
+
+   <%= form_for(@list) do |f| %>
+      <span><%= f.label :リスト名 %></span>
+      <br>
+      <p><%= f.text_field :title,placeholder: "リストタイトルを入力してください" ,style:"width:500px;"%></p>
+      <% if @list.errors.include?(:title) %>
+            <p style="color: red;"><%= list.errors.full_messages_for(:title).first %></p>
+      <% end %>
+      <br>
+       <span><%= f.label :タグ名 %></span>
+           <p><%= f.collection_select :genre_id,genre,:id, :title, {include_blank: "選択してください"}, {class: 'list-tag'} %></p>
+      <% if @list.errors.include?(:genre_id) %>
+            <p style="color: red;"><%= list.errors.full_messages_for(:genre_id).first %>
+      <% end %>
+
+
+      <p><%= f.submit "作成する",class:"btn-list btn-success btn-lg" %></p>
+    <% end %>
+
+  </div>
+  　　<div class="black-background" id="js-black-bg"></div>
+　　　　</div>
