@@ -1,3 +1,6 @@
+<div class = "quick-menu">
+<button id="js-show-popup" class = "btn btn-primary btn-lg">リストクイック作成</button>
+</div>
 <div class="topPage">
   <div class="listWrapper">
     <% @lists.each do |list| %>
@@ -39,3 +42,29 @@
     <% end %>
   </div>
 </div>
+
+  <%=render "lists/list_mordal",list: @list,genre: @genre %>
+
+<script>
+function popupImage() {
+  var popup = document.getElementById('js-popup');
+  if(!popup) return;
+
+  var blackBg = document.getElementById('js-black-bg');
+
+  var blackBg = document.getElementById('js-black-bg');
+  var closeBtn = document.getElementById('js-close-btn');
+  var showBtn = document.getElementById('js-show-popup');
+
+  closePopUp(blackBg);
+  closePopUp(closeBtn);
+  closePopUp(showBtn);
+  function closePopUp(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      popup.classList.toggle('is-show');
+    });
+  }
+}
+popupImage();
+</script>
