@@ -39,20 +39,17 @@
       <%= link_to "https://github.com/yoichi3223/Think_Flog" do %>
          <i class="fab fa-github fa-lg github"></i>
       <% end %>
-        <!-- <i class="fab fa-facebook-square fa-lg fb"></i>
-        <i class="fab fa-twitter fa-lg twitter"></i> -->
+ 
      </div>
  </footer>
- <div id = "privacy-panel">
- <p>当サイトのテストアカウントは下記となります。お気軽にご利用ください.
-メールアドレス:test01@test.com パスワード:test01</p>
-<button id = "agreebtn">閉じる</button>
+ <div id = 'privacy-panel'>
+ <p>当サイトのテストアカウントは下記となります。お気軽にお試しください。<br>
+メールアドレス:test01@test.com
+パスワード:test01</p>
+<button id = 'agreebtn'>閉じる</button>
 </div>
 
-<script src="app/assets/javascripts/js.cookie.js"></script>
 <script>
-'use strict';
-
 const agree = Cookies.get('cookie-agree');
 const panel = document.getElementById('privacy-panel');
 if(agree === 'yes') {
