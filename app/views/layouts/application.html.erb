@@ -43,5 +43,26 @@
         <i class="fab fa-twitter fa-lg twitter"></i> -->
      </div>
  </footer>
+ <div id = "privacy-panel">
+ <p>当サイトのテストアカウントは下記となります。お気軽にご利用ください.
+メールアドレス:test01@test.com パスワード:test01</p>
+<button id = "agreebtn">閉じる</button>
+</div>
+
+<script src="../../javascripts/js.cookie.js"></script>
+<script>
+'use strict';
+
+const agree = Cookies.get('cookie-agree');
+const panel = document.getElementById('privacy-panel');
+if(agree === 'yes') {
+    document.body.removeChild(panel);
+} else {
+    document.getElementById('agreebtn').onclick = function() {
+        Cookies.set('cookie-agree', 'yes', {expires: 7});
+        document.body.removeChild(panel);
+    };
+}
+</script>
     </body>
       </html>
