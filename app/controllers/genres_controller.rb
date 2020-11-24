@@ -15,7 +15,7 @@ class GenresController < ApplicationController
       @genre.user_id = current_user.id
     if @genre.save
        flash[:notice] = "タグを作成しました"
-       redirect_to user_genres_path
+       redirect_to user_genres_path(current_user)
     else
        render action: :index
     end

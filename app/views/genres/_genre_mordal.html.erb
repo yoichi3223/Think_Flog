@@ -1,0 +1,21 @@
+
+            <div class="popup" id="js-popup2">
+        <div class="popup-inner">
+    <div class="close-btn" id="js-close-btn2"><i class="fas fa-times"></i></div>
+  
+
+<%= form_with model: [genre],url: genres_path,method: :post ,local: true do |form| %>
+
+  　　　<%= form.text_field :title, class: "form-control", placeholder: "タグ名を入力してください" %>
+<br>
+<div class ="mordal-genre">
+      <%= form.radio_button :status, :true %><span class = "genre-text">有効</span>
+
+      <%= form.radio_button :status, :false %><span class = "genre-text">無効</span>
+      <%= form.submit "作成する",class:"btn btn-success btn-lg" %>
+      </div>
+  <% end %>
+
+  </div>
+  　　<div class="black-background" id="js-black-bg2"></div>
+　　　　</div>
