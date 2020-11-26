@@ -288,3 +288,40 @@ footer p {
 #agreebtn:active {
 	background: #0FA4D1;
 }
+
+
+//レスポンシブデザイン(スマートフォン)
+@media screen and (max-width:425px) {
+	.main-visual {
+		width: 100%;
+
+	}
+
+	.main-visual-text .btn-danger {
+		width: 350px;
+		margin-left: 20px;
+	}
+
+	.contents section {
+		float: none;
+	}
+
+	.contents-pictures {
+		padding-left: 55px;
+	}
+
+	.contents p {
+		padding-left: 55px;
+	}
+
+
+	.qa,
+	.video-area {
+		display: none;
+	}
+
+	footer {
+		width: 100%;
+		display: none;
+	}
+}
