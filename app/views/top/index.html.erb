@@ -1,5 +1,6 @@
 <div class = "quick-menu">
 <button id="js-show-popup" class = "btn btn-primary btn-lg">リストクイック作成</button>
+<button id="js-show-popup3" class = "btn btn-success btn-lg">カードクイック作成</button>
 <button id="js-show-popup2" class = "btn btn-info btn-lg">ジャンルクイック作成</button>
 </div>
 <div class="topPage">
@@ -36,7 +37,7 @@
 
           <div class="addCard">
             <i class="far fa-plus-square"></i>
-            <%= link_to "さらにカードを追加", new_list_card_path(list), class: "addCard_link" %>
+            <%= link_to "さらにカードを追加", new_list_card_path(list), class: "addCard_link",id:"js-show-popup2" %>
           </div>
         </div>
       </div>
@@ -46,8 +47,9 @@
 
   <%=render "lists/list_mordal",list: @list,genre: @genres %>
   <%=render "genres/genre_mordal",genre: @genre %>
+  <%# <%=render "cards/card_mordal", card: @card%> %>
 <script>
-function popupImage() {
+function popupImage(){
   var popup = document.getElementById('js-popup');
   if(!popup) return;
 
@@ -80,6 +82,30 @@ function popupImage() {
   var blackBg = document.getElementById('js-black-bg2');
   var closeBtn = document.getElementById('js-close-btn2');
   var showBtn = document.getElementById('js-show-popup2');
+
+  closePopUp(blackBg);
+  closePopUp(closeBtn);
+  closePopUp(showBtn);
+  function closePopUp(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      popup.classList.toggle('is-show');
+    });
+  }
+}
+popupImage();
+</script>
+
+<script>
+function popupImage() {
+  var popup = document.getElementById('js-popup3');
+  if(!popup) return;
+
+  var blackBg = document.getElementById('js-black-bg3');
+
+  var blackBg = document.getElementById('js-black-bg3');
+  var closeBtn = document.getElementById('js-close-btn3');
+  var showBtn = document.getElementById('js-show-popup3');
 
   closePopUp(blackBg);
   closePopUp(closeBtn);
